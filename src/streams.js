@@ -4,7 +4,7 @@ const cipher = require("./cipher");
 
 function readStreamFunc(filename) {
   if (filename) {
-    if (fs.accessSync(filename)) {
+    if (fs.existsSync(filename)) {
       return fs.createReadStream(filename, "utf-8");
     } else {
       process.stdout.write("Input file does not exist");
@@ -16,7 +16,7 @@ function readStreamFunc(filename) {
 
 function writeStreamFunc(filename) {
   if (filename) {
-    if (fs.accessSync(filename)) {
+    if (fs.existsSync(filename)) {
       return fs.createWriteStream(filename, { encoding: 'utf8', flags: "a" });
     } else {
       process.stdout.write("Output file does not exist");
