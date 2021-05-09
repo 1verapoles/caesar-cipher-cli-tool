@@ -29,21 +29,21 @@ The CLI tool is accepted 4 options (short alias and full name):
 
 **1.**
 ```bash
-$ node . -a encode -s 7 -i "./input.txt" -o "./output.txt"
+$ node src -a encode -s 7 -i "./input.txt" -o "./output.txt"
 ```
 **2.**
 ```bash
-$ node . --action encode --shift 7 --input "./input.txt" --output "./output.txt"
+$ node src --action encode --shift 7 --input "./input.txt" --output "./output.txt"
 ```
 ```bash
-$ node . --action encode --shift 7
+$ node src --action encode --shift 7
 ```
 **3.**
 ```bash
-$ node . --action decode --shift 7 --input "./input.txt" --output "./output.txt"
+$ node src --action decode --shift 7 --input "./input.txt" --output "./output.txt"
 ```
 ```bash
-$ node . --action decode --shift 7
+$ node src --action decode --shift 7
 ```
 
 > input.txt
