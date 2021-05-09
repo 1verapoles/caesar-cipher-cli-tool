@@ -7,7 +7,7 @@ function readStreamFunc(filename) {
     if (fs.existsSync(filename)) {
       return fs.createReadStream(filename, "utf-8");
     } else {
-      process.stdout.write("Input file does not exist");
+      process.stderr.write("Input file does not exist");
       process.exit(1);
     }
   }
@@ -19,7 +19,7 @@ function writeStreamFunc(filename) {
     if (fs.existsSync(filename)) {
       return fs.createWriteStream(filename, { encoding: 'utf8', flags: "a" });
     } else {
-      process.stdout.write("Output file does not exist");
+      process.stderr.write("Output file does not exist");
       process.exit(1);
     }
   }
